@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\MoveSelectedPiece.cs" />
      <Compile Include="Assets\Scripts\PieceController.cs" />
      <Compile Include="Assets\Scripts\PiecesControllers\AlfilController.cs" />
+     <Compile Include="Assets\Scripts\PiecesControllers\CaballoController.cs" />
      <Compile Include="Assets\Scripts\PiecesControllers\KingController.cs" />
      <Compile Include="Assets\Scripts\PiecesControllers\PeonController.cs" />
      <Compile Include="Assets\Scripts\PiecesControllers\ReinaController.cs" />
