@@ -7,8 +7,11 @@ public abstract class PieceController : MonoBehaviour {
     public GameObject validZone;
     protected GameController gameController;
 
-	// Use this for initialization
-	void Start () {
+    protected List<Vector3> MoveLocations;
+
+
+    // Use this for initialization
+    void Start () {
         GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
         if(gameControllerObject != null)
         {
@@ -31,6 +34,7 @@ public abstract class PieceController : MonoBehaviour {
         {
             gameController.SetSelectedPiece(gameObject.GetComponent<PieceController>());
             gameController.DeletePreviousMoveOptions();
+            LoadPosibleMoves();
             ShowPosibleMoves();
         }
     }
@@ -40,7 +44,15 @@ public abstract class PieceController : MonoBehaviour {
         gameObject.transform.position = newPos;
     }
 
-    public abstract void ShowPosibleMoves();
+    public void ShowPosibleMoves()
+    {
+        for (int i = 0; i < MoveLocations.Count; i++)
+        {
+            Instantiate(validZone, MoveLocations[i], transform.rotation);
+        }
+    }
+
+    public abstract void LoadPosibleMoves();
 
 
 }

@@ -9,21 +9,23 @@ public  class PeonController : PieceController
     public float transformToQueenLine;
     public GameObject queen;
 
-    public override void ShowPosibleMoves()
+    public override void LoadPosibleMoves()
     {
+        MoveLocations = new List<Vector3>();
         float adelanteDependiendoDireccion = 1 * Mathf.Cos((transform.localEulerAngles.y * Mathf.PI) / 180);
 
         //Checkea movimiento adelante
         Vector3 adelante = transform.position + new Vector3(0,0, adelanteDependiendoDireccion);
         if (gameController.CheckFree(adelante))
         {
-            Instantiate(validZone, adelante, transform.rotation);
+            MoveLocations.Add(adelante);
 
             //Checkea movimiento inicial
             Vector3 dosPasosAdelante = adelante + new Vector3(0, 0, adelanteDependiendoDireccion);
             if (transform.position.z == startLine && gameController.CheckFree(dosPasosAdelante))
             {
-                Instantiate(validZone, adelante + new Vector3(0, 0, adelanteDependiendoDireccion), transform.rotation);
+                MoveLocations.Add(adelante + new Vector3(0, 0, adelanteDependiendoDireccion));
+
             }
         }
 
@@ -31,14 +33,14 @@ public  class PeonController : PieceController
         Vector3 adelanteDerecha = transform.position + new Vector3(1, 0, adelanteDependiendoDireccion);
         if (gameController.CheckOponent(adelanteDerecha))
         {
-            Instantiate(validZone, adelanteDerecha, transform.rotation);
+            MoveLocations.Add(adelanteDerecha);
         }
 
         //Checkea movimiento adelante izquierda
         Vector3 adelanteIzquierda = transform.position + new Vector3(-1, 0, adelanteDependiendoDireccion);
         if (gameController.CheckOponent(adelanteIzquierda))
         {
-            Instantiate(validZone, adelanteIzquierda, transform.rotation);
+            MoveLocations.Add(adelanteIzquierda);
         }
     }
 

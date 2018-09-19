@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class TorreController : PieceController {
 
-    override public void ShowPosibleMoves()
+    override public void LoadPosibleMoves()
     {
+        MoveLocations = new List<Vector3>();
+
         for (int ejeXvar = -1; ejeXvar <= 1; ejeXvar++)
         {
             for (int ejeZvar = -1; ejeZvar <= 1; ejeZvar++)
@@ -16,12 +18,12 @@ public class TorreController : PieceController {
 
                     while (gameController.CheckFree(posToCheck))
                     {
-                        Instantiate(validZone, posToCheck, transform.rotation);
+                        MoveLocations.Add(posToCheck);
                         posToCheck = new Vector3(posToCheck.x + ejeXvar, 0, posToCheck.z + ejeZvar);
                     }
                     if (gameController.CheckOponent(posToCheck))
                     {
-                        Instantiate(validZone, posToCheck, transform.rotation);
+                        MoveLocations.Add(posToCheck);
                     }
                 }
                 
