@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TorreController : PieceController {
 
-    override public void LoadPosibleMoves()
+    override public List<Vector3> LoadPosibleMoves()
     {
-        MoveLocations = new List<Vector3>();
+        List<Vector3> locations = new List<Vector3>();
 
         for (int ejeXvar = -1; ejeXvar <= 1; ejeXvar++)
         {
@@ -18,16 +18,17 @@ public class TorreController : PieceController {
 
                     while (gameController.CheckFree(posToCheck))
                     {
-                        MoveLocations.Add(posToCheck);
+                        locations.Add(posToCheck);
                         posToCheck = new Vector3(posToCheck.x + ejeXvar, 0, posToCheck.z + ejeZvar);
                     }
                     if (gameController.CheckOponent(posToCheck))
                     {
-                        MoveLocations.Add(posToCheck);
+                        locations.Add(posToCheck);
                     }
                 }
                 
             }
         }
+        return locations;
     }
 }

@@ -6,11 +6,8 @@ public abstract class PieceController : MonoBehaviour {
 
     public GameObject validZone;
     protected GameController gameController;
-
     protected List<Vector3> MoveLocations;
 
-
-    // Use this for initialization
     void Start () {
         GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
         if(gameControllerObject != null)
@@ -22,11 +19,6 @@ public abstract class PieceController : MonoBehaviour {
             Debug.Log("No hay game controller");
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void OnMouseDown()
     {
@@ -34,7 +26,7 @@ public abstract class PieceController : MonoBehaviour {
         {
             gameController.SetSelectedPiece(gameObject.GetComponent<PieceController>());
             gameController.DeletePreviousMoveOptions();
-            LoadPosibleMoves();
+            MoveLocations = LoadPosibleMoves();
             ShowPosibleMoves();
         }
     }
@@ -52,7 +44,7 @@ public abstract class PieceController : MonoBehaviour {
         }
     }
 
-    public abstract void LoadPosibleMoves();
+    public abstract List<Vector3> LoadPosibleMoves();
 
 
 }
