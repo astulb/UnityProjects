@@ -105,10 +105,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 957
-  m_MinSize: {x: 613, y: 471}
-  m_MaxSize: {x: 18008, y: 14021}
+  m_MinSize: {x: 609, y: 471}
+  m_MaxSize: {x: 18004, y: 14021}
   vertical: 1
-  controlID: 93
+  controlID: 68
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 957
-  m_MinSize: {x: 613, y: 471}
-  m_MaxSize: {x: 18008, y: 14021}
+  m_MinSize: {x: 609, y: 471}
+  m_MaxSize: {x: 18004, y: 14021}
   vertical: 0
-  controlID: 94
+  controlID: 69
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,8 +152,8 @@ MonoBehaviour:
     y: 0
     width: 1139
     height: 957
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 56
+  controlID: 11
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,8 +252,8 @@ MonoBehaviour:
     y: 0
     width: 545
     height: 957
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -370,9 +370,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.3300414, y: -4.623749, z: 5.211875}
+    m_Target: {x: 3.4577265, y: -4.229748, z: 5.6421123}
     speed: 2
-    m_Value: {x: 3.3300414, y: -4.623749, z: 5.211875}
+    m_Value: {x: 3.4577265, y: -4.229748, z: 5.6421123}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.39736906, y: 0.0316524, z: -0.013715236, w: -0.9170103}
     speed: 2
-    m_Value: {x: -0.39736906, y: 0.0316524, z: -0.013715236, w: -0.9170103}
+    m_Value: {x: -0.39736903, y: 0.0316524, z: -0.0137152355, w: -0.91701025}
   m_Size:
     m_Target: 18.899776
     speed: 2
@@ -445,9 +445,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6c2d0000
-    m_LastClickedID: 11628
-    m_ExpandedIDs: e6fbffff00000000662d0000
+    m_SelectedIDs: 3a280000
+    m_LastClickedID: 0
+    m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -508,19 +508,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scripts
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Astul\Documents\Proyectos Unity\Ajedrez
+  m_LastProjectPath: C:\Users\Astul\Documents\Proyectos Unity\GitHub\Ajedrez
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b6280000
     m_LastClickedID: 10422
-    m_ExpandedIDs: 00000000f2290000f82a0000fa2a00002e2b0000862b0000f82b00009c2c0000d22c00003e2e0000402e0000422e0000442e0000
+    m_ExpandedIDs: 00000000f2290000f62a0000f82a0000842b0000f62b00006e2c0000d02c00006e2e0000702e0000722e0000742e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -548,18 +548,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000f2290000f82a0000fa2a0000862b0000f82b0000702c0000d22c00003e2e0000402e0000422e0000442e0000
+    m_ExpandedIDs: ffffffff00000000f2290000f62a0000f82a0000842b0000f62b0000d02c00006e2e0000702e0000722e0000742e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: TransparentGreen
-      m_OriginalName: TransparentGreen
+      m_Name: PieceController
+      m_OriginalName: PieceController
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10834
+      m_UserData: 10298
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
