@@ -13,6 +13,7 @@
 *.userprefs
 
 # Build results
+/[Ll]ibrary/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -23,10 +24,11 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Ll]ibrary/
 
 # Visual Studio 2015 cache/options directory
 .vs/
-Library/
+Ajedrez/Library/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -287,8 +289,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-
-#############################################################################
 
 [Ll]ibrary/
 [Tt]emp/
