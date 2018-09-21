@@ -7,7 +7,25 @@ public class GameController : MonoBehaviour {
 
     public string turno;
 
+    private GameObject peonSeMovio;
+
     private PieceController selectedPiece;
+
+
+
+    public GameObject PeonSeMovio
+    {
+        set
+        {
+            peonSeMovio = value;
+        }
+        get
+        {
+            return peonSeMovio;
+        }
+    }
+
+
 
     // Use this for initialization
     void Start() {

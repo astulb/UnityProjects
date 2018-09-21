@@ -1,0 +1,10 @@
+ 
+
+1- comer al paso 
+2- peon corona
+
+3- detectar jaque 
+4- enroque
+5- jaque mate 
+
+6- comer al tocar pieza

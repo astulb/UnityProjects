@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   validZone: {fileID: 1958426926964696, guid: 6dc6da625531b114b9032632c98bb659, type: 2}
+  comerAlPaso: 3
   startLine: 6
   transformToQueenLine: 0
   queen: {fileID: 1471985601831630, guid: 664a4dc6e997f5f47a9233db911328ac, type: 2}

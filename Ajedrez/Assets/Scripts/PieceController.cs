@@ -29,11 +29,13 @@ public abstract class PieceController : MonoBehaviour {
             MoveLocations = LoadPosibleMoves();
             ShowPosibleMoves();
         }
+
     }
 
     public virtual void MoveTo(Vector3 newPos)
     {
         gameObject.transform.position = newPos;
+        gameController.PeonSeMovio = null;
     }
 
     public void ShowPosibleMoves()

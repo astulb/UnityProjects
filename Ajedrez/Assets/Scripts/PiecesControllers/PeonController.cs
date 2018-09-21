@@ -4,7 +4,7 @@ using UnityEngine;
 
 public  class PeonController : PieceController
 {
-
+    public float comerAlPaso;
     public float startLine;
     public float transformToQueenLine;
     public GameObject queen;
@@ -43,6 +43,22 @@ public  class PeonController : PieceController
             locations.Add(adelanteIzquierda);
         }
 
+        //Chequear comer al pazo   
+        if(gameController.PeonSeMovio != null && comerAlPaso == transform.position.z)
+        {
+            Vector3 myPosition = transform.position;
+            Vector3 peonEnemyPosition = gameController.PeonSeMovio.transform.position;
+            if (myPosition.z == peonEnemyPosition.z && (myPosition.x == peonEnemyPosition.x+1|| myPosition.x == peonEnemyPosition.x -1))
+            {
+                Vector3 comerAlPaso = new Vector3(peonEnemyPosition.x, 0, peonEnemyPosition.z + adelanteDependiendoDireccion);
+
+                locations.Add(comerAlPaso);
+            }
+        }      
+        
+
+        
+
         return locations;
     }
 
@@ -58,6 +74,9 @@ public  class PeonController : PieceController
         {
             gameObject.transform.position = newPos;
         }
+
+        gameController.PeonSeMovio = gameObject;
+
     }
 
     

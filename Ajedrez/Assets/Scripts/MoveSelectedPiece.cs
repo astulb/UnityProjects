@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveSelectedPiece : MonoBehaviour {
+public class MoveSelectedPiece : MonoBehaviour
+{
 
     private GameController gameController;
 
@@ -34,6 +35,15 @@ public class MoveSelectedPiece : MonoBehaviour {
         for (int i = 0; i < hitColliders.Length; i++)
         {
             Destroy(hitColliders[i].gameObject);
+        }
+
+        if (gameController.PeonSeMovio != null)
+        {
+
+            if (gameController.PeonSeMovio.transform.position.x == transform.position.x && hitColliders.Length == 0)
+            {
+                Destroy(gameController.PeonSeMovio);
+            }
         }
     }
 }
